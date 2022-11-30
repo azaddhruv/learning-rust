@@ -36,12 +36,36 @@ use std::cmp::Ordering;
 //     };
 // }
 
-fn main() {
-    let my_age = 18;
-    let voting_age = 18;
-    match my_age.cmp(&voting_age) {
-        Ordering::Less => println!("Can't Vote"),
-        Ordering::Greater => println!("Can Vote"),
-        Ordering::Equal => println!("You have earn the right to vote"),
-    };
+// fn main() {
+//     let my_age = 18;
+//     let voting_age = 18;
+//     match my_age.cmp(&voting_age) {
+//         Ordering::Less => println!("Can't Vote"),
+//         Ordering::Greater => println!("Can Vote"),
+//         Ordering::Equal => println!("You have earn the right to vote"),
+//     };
+// }
+
+
+// fn main(){
+//     let arr_2 = [1,2,3,4,5,6,7,8,9];
+//     println!("1st : {}", arr_2[0]);
+//     println!("Length: {}", arr_2.len());
+// }
+
+
+fn main(){
+    let arr_2 = [1,2,3,4,5,6,7,8,9];
+    let mut loop_inx = 0;
+    loop {
+        if arr_2[loop_inx] % 2 == 0 {
+            loop_inx+=1;
+            continue;
+        }
+        if(arr_2[loop_inx] == 9){
+            break;
+        }
+        println!(" Val : {}", arr_2[loop_inx]);
+        loop_inx+=1;
+    }
 }
